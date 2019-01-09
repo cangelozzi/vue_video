@@ -1,1 +1,1 @@
-# a3_lastClass_B
+# Practicing Vue Components in a Single App structure

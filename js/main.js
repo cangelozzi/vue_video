@@ -1,4 +1,17 @@
 (()=> {
+
+  // define a Global Component
+  // Vue.component('poster', {
+  //   props: ['video'],
+  //   template:
+  // });
+
+  //! grab component
+  let posterComponent = {
+    props: ["video"],
+    template: "#poster-template"
+  };
+
     const vm = new Vue({
         el: '#app',
 
@@ -65,6 +78,11 @@
                     console.log(error);
                 });
             }
+        },
+
+        components: {
+          'poster': posterComponent
         }
+
     });
 })();
