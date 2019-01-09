@@ -1,16 +1,16 @@
 (()=> {
 
-  //! define a Global Component
-  Vue.component('poster', {
-    props: ['video'],
-    template: ` <li>
-                    <button class="more-details">More Details...</button>
-                    <a :href="video.vid_path">
-                        <img :src="'images/' + video.vid_thumb" alt="">
-                    </a>
-                    <p>put genre data here</p>  <!-- add a field to the DB (or subquery another table) and plug data in -->
-                </li>`
-  });
+  // define a Global Component
+  // Vue.component('poster', {
+  //   props: ['video'],
+  //   template:
+  // });
+
+  //! grab component
+  let posterComponent = {
+    props: ["video"],
+    template: "#poster-template"
+  };
 
     const vm = new Vue({
         el: '#app',
@@ -78,6 +78,11 @@
                     console.log(error);
                 });
             }
+        },
+
+        components: {
+          'poster': posterComponent
         }
+
     });
 })();

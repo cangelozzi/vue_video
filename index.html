@@ -32,6 +32,19 @@
             <span v-on:click="scrollBackUp" :class="{'show-scroller': showDetails }">^</span>
         </div>
     </main>
+
     <script src="js/main.js"></script>
+
+    <!-- TEMPLATES -->
+    <template id="poster-template">
+      <li>
+          <button class="more-details">More Details...</button>
+          <a :href="video.vid_path">
+              <img :src="'images/' + video.vid_thumb" :alt="video.vid_name">
+          </a>
+          <p>put genre data here</p>
+      </li>
+    </template>
+
 </body>
 </html>
